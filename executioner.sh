@@ -1,5 +1,4 @@
-runargs()
-{
+bringnburn() {
 case $1 in
   --install)
       apt install $2
@@ -10,4 +9,7 @@ case $1 in
 esac
 }
 
-runargs $1 $2
+menu() {
+clear
+echo "adAPT beta"
+}
