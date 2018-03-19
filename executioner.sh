@@ -1,15 +1,14 @@
 bringnburn() {
-case $1 in
-  --install)
-      apt install $2
-      ;;
-  --purge)
-     apt purge $2
-     ;;
-esac
+apt $1 $2
 }
 
 menu() {
 clear
 echo "adAPT beta"
+echo "purge or install?"
+read A
+echo "What package?"
+read B
+bringnburn $A $B
 }
+menu
